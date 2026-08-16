@@ -1,0 +1,8 @@
+{
+  "custom/performance": {
+    "exec": "~/.local/bin/waybar-performance",
+    "interval": 2,
+    "tooltip": false,
+    "return-type": "text"
+  }
+}

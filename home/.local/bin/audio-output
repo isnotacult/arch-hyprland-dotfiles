@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+STATE_FILE="$HOME/.cache/current-audio-sink"
+default_sink="$(pactl get-default-sink)"
+
+choice="$(
+  pactl list sinks | awk -v def="$default_sink" '
+    /^Sink #/ {
+      sink=""
+      desc=""
+    }
+
+    /^[[:space:]]*Name:/ {
+      sink=$2
+    }
+
+    /^[[:space:]]*Description:/ {
+      desc=$0
+      sub(/^[[:space:]]*Description:[[:space:]]*/, "", desc)
+
+      if (sink == def) {
+        print "● " desc " | " sink
+      } else {
+        print "  " desc " | " sink
+      }
+    }
+  ' | rofi -dmenu -p "Audio output"
+)"
+
+[ -z "$choice" ] && exit 0
+
+sink="${choice##* | }"
+
+echo "$sink" > "$STATE_FILE"
+
+pactl set-default-sink "$sink"
+
+pactl list short sink-inputs | awk '{print $1}' | while read -r input; do
+  pactl move-sink-input "$input" "$sink" 2>/dev/null || true
+done

@@ -1,0 +1,135 @@
+* {
+  font: "JetBrainsMono Nerd Font 13";
+
+  bg0: rgba(26, 27, 38, 0.72);
+  bg1: rgba(31, 35, 53, 0.58);
+  bg2: rgba(36, 40, 59, 0.38);
+  bg3: rgba(65, 72, 104, 0.55);
+
+  fg0: #c0caf5;
+  fg1: #a9b1d6;
+  fg2: #737aa2;
+
+  accent: #7aa2f7;
+  urgent: #e0af68;
+
+  background-color: transparent;
+  text-color: @fg0;
+
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  location: center;
+  anchor: center;
+
+  width: 720px;
+
+  x-offset: 0px;
+  y-offset: -80px;
+
+  background-color: @bg0;
+
+  border: 1px;
+  border-color: rgba(122, 162, 247, 0.35);
+  border-radius: 22px;
+
+  padding: 14px;
+}
+
+mainbox {
+  background-color: transparent;
+  spacing: 12px;
+}
+
+inputbar {
+  spacing: 10px;
+  padding: 14px 18px;
+
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.06);
+
+  children: [ icon-search, entry ];
+}
+
+icon-search {
+  expand: false;
+  filename: "search-symbolic";
+  size: 18px;
+  vertical-align: 0.5;
+}
+
+entry {
+  placeholder: "Search";
+  placeholder-color: @fg2;
+  text-color: @fg0;
+  background-color: transparent;
+  vertical-align: 0.5;
+}
+
+listview {
+  lines: 8;
+  columns: 1;
+
+  spacing: 6px;
+  padding: 0px;
+
+  scrollbar: false;
+  fixed-height: false;
+  dynamic: true;
+
+  background-color: transparent;
+}
+
+element {
+  padding: 11px 14px;
+  spacing: 12px;
+
+  border-radius: 14px;
+
+  background-color: transparent;
+  text-color: @fg1;
+}
+
+element normal.normal {
+  background-color: transparent;
+  text-color: @fg1;
+}
+
+element alternate.normal {
+  background-color: transparent;
+  text-color: @fg1;
+}
+
+element selected.normal {
+  background-color: rgba(122, 162, 247, 0.22);
+  text-color: @fg0;
+}
+
+element selected.active {
+  background-color: rgba(122, 162, 247, 0.28);
+  text-color: @fg0;
+}
+
+element selected.urgent {
+  background-color: rgba(224, 175, 104, 0.25);
+  text-color: @fg0;
+}
+
+element-icon {
+  size: 22px;
+  background-color: transparent;
+}
+
+element-text {
+  text-color: inherit;
+  background-color: transparent;
+  vertical-align: 0.5;
+}
+
+scrollbar {
+  width: 0px;
+  handle-width: 0px;
+}

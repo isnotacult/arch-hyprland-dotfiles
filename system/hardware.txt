@@ -1,0 +1,32 @@
+CPU/GPU/RAM:
+CPU(s):                                  16
+On-line CPU(s) list:                     0-15
+Model name:                              AMD Ryzen 7 5700X 8-Core Processor
+Thread(s) per core:                      2
+Core(s) per socket:                      8
+Socket(s):                               1
+CPU(s) scaling MHz:                      80%
+NUMA node0 CPU(s):                       0-15
+
+09:00.0 Network controller: Realtek Semiconductor Co., Ltd. RTL8852BE PCIe 802.11ax Wireless Network Controller
+0a:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+0b:00.0 VGA compatible controller: NVIDIA Corporation GA102 [GeForce RTX 3080 Lite Hash Rate] (rev a1)
+0b:00.1 Audio device: NVIDIA Corporation GA102 High Definition Audio Controller (rev a1)
+0d:00.4 Audio device: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller
+
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       4.9Gi        23Gi       106Mi       3.0Gi        26Gi
+Swap:          4.0Gi          0B       4.0Gi
+
+NAME        FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+zram0       swap   1     zram0 515061ad-a169-433b-a847-e2dbd79b3728                [SWAP]
+nvme1n1                                                                            
+├─nvme1n1p1                                                                        
+├─nvme1n1p2 ntfs               AA569F1C569EE879                                    
+├─nvme1n1p3 vfat   FAT32       7636-750D                               727M    25% /boot
+└─nvme1n1p4 ext4   1.0         f79fe8f8-1604-4be6-bd0d-a8bbb5aeb24b  213.1G     5% /
+nvme0n1                                                                            
+├─nvme0n1p1 vfat   FAT32       605B-96FD                                           
+├─nvme0n1p2                                                                        
+├─nvme0n1p3 ntfs               60545C44545C1EDA                                    
+└─nvme0n1p4 ntfs               26D0E0C5D0E09BF5                                    

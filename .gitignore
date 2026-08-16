@@ -1,0 +1,25 @@
+# secrets
+**/.ssh/**
+**/id_rsa
+**/id_ed25519
+**/*token*
+**/*secret*
+**/*password*
+**/*credentials*
+**/credentials.json
+
+# caches
+**/.cache/**
+**/cache/**
+**/__pycache__/**
+*.log
+
+# browser/app state
+home/.config/google-chrome/
+home/.config/chromium/
+home/.config/Code/User/workspaceStorage/
+home/.config/Code/User/globalStorage/
+
+# local machine junk
+.DS_Store
+Thumbs.db

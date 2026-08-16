@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+SOUND="/usr/share/sounds/freedesktop/stereo/message.oga"
+
+# Не играть звук, если включён DND
+if command -v swaync-client >/dev/null 2>&1; then
+  dnd="$(swaync-client -D 2>/dev/null || true)"
+  [ "$dnd" = "true" ] && exit 0
+fi
+
+[ -f "$SOUND" ] || exit 0
+
+pw-play "$SOUND" >/dev/null 2>&1 &

@@ -1,0 +1,54 @@
+Kernel:
+Linux arch 7.1.8-arch1-3 #1 SMP PREEMPT_DYNAMIC Tue, 11 Aug 2026 09:16:08 +0000 x86_64 GNU/Linux
+
+Hyprland:
+Hyprland 0.56.2 built from branch v0.56.2 at commit efb50993780079460b0cbed1363e2166a2de1d9f clean ([gha] Nix: update inputs).
+Date: Wed Aug 5 14:13:21 2026
+Tag: v0.56.2, commits: 7661
+
+Libraries:
+Hyprgraphics: built against 0.5.1, system has 0.5.1
+Hyprutils: built against 0.14.0, system has 0.14.1
+Hyprcursor: built against 0.1.13, system has 0.1.13
+Hyprlang: built against 0.6.8, system has 0.6.8
+Aquamarine: built against 0.14.0, system has 0.14.0
+
+Version ABI string: efb50993780079460b0cbed1363e2166a2de1d9f_aq_0.14_hu_0.14_hg_0.5_hc_0.1_hlg_0.6
+no flags were set
+
+
+NVIDIA:
+Mon Aug 17 01:35:07 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3080        Off |   00000000:0B:00.0  On |                  N/A |
+|  0%   43C    P5             41W /  320W |    1138MiB /  10240MiB |     40%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A             664      G   /usr/lib/Xorg                            23MiB |
+|    0   N/A  N/A             788      G   Hyprland                                 83MiB |
+|    0   N/A  N/A             822      G   hyprpaper                               159MiB |
+|    0   N/A  N/A             882      G   Xwayland                                  4MiB |
+|    0   N/A  N/A            1731    C+G   ...rack-uuid=3190708988185955192         35MiB |
+|    0   N/A  N/A            2832      G   /usr/bin/hyprpaper                      205MiB |
+|    0   N/A  N/A           34038      G   kitty                                    17MiB |
+|    0   N/A  N/A          166199      G   /home/isnotacult/zen/zen                299MiB |
+|    0   N/A  N/A          199420      G   kitty                                    22MiB |
++-----------------------------------------------------------------------------------------+
+
+Waybar:
+Waybar v0.15.0
+
+Rofi:
+Version: 2.0.0-dirty

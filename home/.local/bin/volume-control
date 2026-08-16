@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+STATE_FILE="$HOME/.cache/current-audio-sink"
+
+get_sink() {
+    if [ -f "$STATE_FILE" ]; then
+        sink="$(cat "$STATE_FILE")"
+        if pactl list short sinks | awk '{print $2}' | grep -Fxq "$sink"; then
+            echo "$sink"
+            return
+        fi
+    fi
+
+    pactl get-default-sink
+}
+
+get_volume() {
+    sink="$1"
+    pactl get-sink-volume "$sink" \
+        | grep -o '[0-9]\+%' \
+        | head -n1 \
+        | tr -d '%'
+}
+
+set_volume() {
+    sink="$1"
+    vol="$2"
+
+    [ "$vol" -gt 100 ] && vol=100
+    [ "$vol" -lt 0 ] && vol=0
+
+    pactl set-sink-volume "$sink" "${vol}%"
+}
+
+sink="$(get_sink)"
+current="$(get_volume "$sink")"
+
+case "$1" in
+    up)
+        if [ "$current" -ge 100 ]; then
+            set_volume "$sink" 100
+        else
+            set_volume "$sink" "$((current + 3))"
+        fi
+        ;;
+
+    down)
+        if [ "$current" -gt 100 ]; then
+            set_volume "$sink" 100
+        else
+            set_volume "$sink" "$((current - 3))"
+        fi
+        ;;
+
+    mute)
+        pactl set-sink-mute "$sink" toggle
+        ;;
+
+    *)
+        echo "Usage: volume-control up|down|mute"
+        exit 1
+        ;;
+esac

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+CPU_USAGE=$(top -bn1 | awk -F'id,' '/Cpu/ { split($1,a,","); split(a[length(a)],b," "); printf "%d", 100-b[1] }')
+
+CPU_TEMP="n/a"
+for h in /sys/class/hwmon/hwmon*; do
+  name=$(cat "$h/name" 2>/dev/null)
+  if [ "$name" = "k10temp" ]; then
+    temp=$(cat "$h"/temp1_input 2>/dev/null)
+    CPU_TEMP="$((temp / 1000))°C"
+    break
+  fi
+done
+
+GPU_DATA=$(nvidia-smi --query-gpu=utilization.gpu,temperature.gpu --format=csv,noheader,nounits 2>/dev/null | head -n1)
+GPU_USAGE=$(echo "$GPU_DATA" | awk -F',' '{gsub(/ /,"",$1); print $1}')
+GPU_TEMP=$(echo "$GPU_DATA" | awk -F',' '{gsub(/ /,"",$2); print $2}')
+
+RAM_USED=$(free -m | awk '/Mem:/ {printf "%.1fG", $3/1024}')
+
+echo " ${CPU_USAGE}% ${CPU_TEMP}  󰢮 ${GPU_USAGE}% ${GPU_TEMP}°C   ${RAM_USED}"
