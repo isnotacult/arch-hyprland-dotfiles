@@ -18,7 +18,7 @@ no flags were set
 
 
 NVIDIA:
-Mon Aug 17 01:35:07 2026       
+Mon Aug 17 03:59:25 2026       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
 +-----------------------------------------+------------------------+----------------------+
@@ -27,7 +27,7 @@ Mon Aug 17 01:35:07 2026
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
 |   0  NVIDIA GeForce RTX 3080        Off |   00000000:0B:00.0  On |                  N/A |
-|  0%   43C    P5             41W /  320W |    1138MiB /  10240MiB |     40%      Default |
+|  0%   43C    P3             66W /  320W |     543MiB /  10240MiB |      7%      Default |
 |                                         |                        |                  N/A |
 +-----------------------------------------+------------------------+----------------------+
 
@@ -37,14 +37,12 @@ Mon Aug 17 01:35:07 2026
 |        ID   ID                                                               Usage      |
 |=========================================================================================|
 |    0   N/A  N/A             664      G   /usr/lib/Xorg                            23MiB |
-|    0   N/A  N/A             788      G   Hyprland                                 83MiB |
-|    0   N/A  N/A             822      G   hyprpaper                               159MiB |
-|    0   N/A  N/A             882      G   Xwayland                                  4MiB |
-|    0   N/A  N/A            1731    C+G   ...rack-uuid=3190708988185955192         35MiB |
-|    0   N/A  N/A            2832      G   /usr/bin/hyprpaper                      205MiB |
-|    0   N/A  N/A           34038      G   kitty                                    17MiB |
-|    0   N/A  N/A          166199      G   /home/isnotacult/zen/zen                299MiB |
-|    0   N/A  N/A          199420      G   kitty                                    22MiB |
+|    0   N/A  N/A             846      G   Hyprland                                 71MiB |
+|    0   N/A  N/A             888      G   hyprpaper                                55MiB |
+|    0   N/A  N/A             943      G   Xwayland                                  9MiB |
+|    0   N/A  N/A            1090      G   /usr/bin/hyprpaper                        3MiB |
+|    0   N/A  N/A            2115      G   /home/isnotacult/zen/zen                159MiB |
+|    0   N/A  N/A           19832      G   kitty                                    22MiB |
 +-----------------------------------------------------------------------------------------+
 
 Waybar:

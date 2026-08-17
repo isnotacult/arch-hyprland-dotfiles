@@ -6,6 +6,7 @@ bluez
 bluez-utils
 btop
 code
+discord
 efibootmgr
 egl-wayland
 eza
@@ -16,6 +17,7 @@ file-roller
 firefox
 fzf
 git
+github-cli
 grim
 gst-plugin-pipewire
 gum
@@ -35,6 +37,9 @@ noto-fonts-emoji
 nvidia-open
 nvidia-settings
 nvidia-utils
+nvtop
+openai-codex
+openrgb
 pavucontrol
 pipewire
 pipewire-alsa
@@ -49,6 +54,7 @@ sddm
 slurp
 spotify-launcher
 starship
+steam
 sudo
 swaync
 telegram-desktop

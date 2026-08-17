@@ -56,3 +56,4 @@ ZSH_HIGHLIGHT_STYLES[command-substitution-quoted]='none'
 ZSH_HIGHLIGHT_STYLES[number]='fg=#a6e3a1'
 ZSH_HIGHLIGHT_STYLES[option]='fg=#fab387'
 ZSH_HIGHLIGHT_STYLES[bracket]='fg=#f9e2af'
+export PATH="$HOME/.local/bin:$PATH"
